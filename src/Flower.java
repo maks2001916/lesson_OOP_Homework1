@@ -4,12 +4,14 @@ public class Flower {
     double cost;
     int lifeSpat;
 
+
     public Flower(String flowerColor, String country, double cost, int lifeSpat) {
         this.flowerColor = flowerColor;
         this.country = country;
         this.cost = cost;
         this.lifeSpat = lifeSpat;
     }
+
 
     void properties() {
         if (flowerColor == null || flowerColor.isBlank() || flowerColor.isEmpty()) {
@@ -55,5 +57,9 @@ public class Flower {
 
     public void setCost(double cost) {
         this.cost = cost;
+    }
+
+    public int getLifeSpat() {
+        return lifeSpat;
     }
 }

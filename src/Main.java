@@ -1,5 +1,5 @@
 public class Main {
-    public static void main(String[] args)
+    public static double[] main(String[] args)
     {
         Human Maksim = new Human(1987,"Максим", "Минск", "бренд менеджером");
         Human Ania = new Human(1993, "Аня", "Москва", "методистом");
@@ -23,5 +23,23 @@ public class Main {
         Hrizantema.properties();
         Pion.properties();
         Gipsofila.properties();
+
+
+        double[] flowers = new double[2];
+        flowers[0] = Roza.getCost();
+        flowers[1] = Hrizantema.getCost();
+        flowers[2] = Pion.getCost();
+        return flowers;
+
+        Bouquet bouquet = new Bouquet(2);
+        for (int i = 0; i < 3; i++) {
+            bouquet.broadcast(Roza);
+        }
+
+
+
+
     }
+
+
 }
