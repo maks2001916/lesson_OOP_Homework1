@@ -1,17 +1,29 @@
 public class Bouquet {
 
-        private Flower[] flowers;
-
-        public Bouquet(int index) {
-            flowers = new Flower[index];
+    private Flower[] flowers;
+    public class Bouquets{
+        private final Flower[] flowers;
+        public Bouquets(Flower[] flowers){
+            this.flowers = flowers;
         }
 
-    public void broadcast(Flower flower) {
-        for (int i = 0; i < flowers.length; i++) {
-            if (flowers[i] == null) {
-                flowers[i] = flower;
-                return;
+        public int getExpiryDays(){
+            int i = 0;
+            for ( i = 0; i < flowers.length; i++) {
+                if (i < flowers[i].getLifeSpat()) {
+                    i = flowers[i].getLifeSpat();
+                }
             }
+            return  i;
+            //ищем цветок с самым маленьким сроком годности
+        }
+        public double getCost(){
+            int j = 0;
+            for (j = 0; j < flowers.length; j++) {
+                j = (int) ((j + flowers[j].getCost()) * 0.1);
+            }
+            return j;
+            //Ищем сумму
         }
     }
 

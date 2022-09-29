@@ -1,7 +1,6 @@
 public class Main {
-    public static double[] main(String[] args)
-    {
-        Human Maksim = new Human(1987,"Максим", "Минск", "бренд менеджером");
+    public static void main(String[] args) {
+        Human Maksim = new Human(1987, "Максим", "Минск", "бренд менеджером");
         Human Ania = new Human(1993, "Аня", "Москва", "методистом");
         Human Katia = new Human(1994, "Катя", "калининград", "продакт менеджером");
         Human Artiem = new Human(1995, "Артём", "Москва", "директором по развитию бизнеса");
@@ -24,22 +23,13 @@ public class Main {
         Pion.properties();
         Gipsofila.properties();
 
-
         double[] flowers = new double[2];
         flowers[0] = Roza.getCost();
         flowers[1] = Hrizantema.getCost();
         flowers[2] = Pion.getCost();
-        return flowers;
-
-        Bouquet bouquet = new Bouquet(2);
-        for (int i = 0; i < 3; i++) {
-            bouquet.broadcast(Roza);
-        }
-
 
 
 
     }
-
 
 }

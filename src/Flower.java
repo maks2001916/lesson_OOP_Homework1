@@ -62,4 +62,12 @@ public class Flower {
     public int getLifeSpat() {
         return lifeSpat;
     }
+
+    public class Bouquet {
+        private final Flower[] flowers;
+
+        public Bouquet(Flower[] flowers) {
+            this.flowers = flowers;
+        }
+    }
 }
